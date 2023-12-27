@@ -2,4 +2,15 @@
   margin: 0 auto;
 
   width: 1170px;
+
+  @include onPhone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+
+    flex-direction: column;
+
+    max-width: 480px;
+  }
 }

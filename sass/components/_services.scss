@@ -1,4 +1,8 @@
 .services {
+  @include onPhone {
+    display: none;
+  }
+
   &__list {
     display: flex;
     gap: 30px;

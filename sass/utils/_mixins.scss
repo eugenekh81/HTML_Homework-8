@@ -34,3 +34,11 @@
   width: $width;
   height: $height;
 }
+
+// adaptive
+
+@mixin onPhone {
+  @media screen and (max-width: 480px) {
+    @content
+  }
+}

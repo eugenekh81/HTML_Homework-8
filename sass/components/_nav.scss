@@ -9,6 +9,10 @@
   &__list {
     display: flex;
     gap: 50px;
+
+    @include onPhone {
+      display: none;
+    }
   }
 
   &__link {

@@ -4,35 +4,39 @@
   gap: 40px;
 
   height: 100%;
-}
 
-.contacts__link {
-  display: flex;
-  align-items: center;
+  @include onPhone {
+    display: none;
+  }
 
-  @include font-style($text-grey-color, 14px, 500);
+  &__link {
+    display: flex;
+    align-items: center;
 
-  letter-spacing: 0.28px;
+    @include font-style($text-grey-color, 14px, 500);
 
-  transition: color 250ms $cubic-bezier-easing;
-}
+    letter-spacing: 0.28px;
 
-.contacts__link--footer {
-  display: flex;
-  color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms $cubic-bezier-easing;
+  }
 
-  @include font-settings($l-height: 20px, $l-spacing: 0.42px);
+  &__link--footer {
+    display: flex;
+    color: rgba(255, 255, 255, 0.6);
 
-  width: fit-content;
-}
+    @include font-settings($l-height: 20px, $l-spacing: 0.42px);
 
-.contacts__link:focus,
-.contacts__link-footer:focus,
-.contacts__link:hover,
-.contacts__link-footer:hover {
-  color: $main-blue-color;
-}
+    width: fit-content;
+  }
 
-.contacts__link:hover::before {
-  background-color: $main-blue-color;
+  &__link:focus,
+  &__link-footer:focus,
+  &__link:hover,
+  &__link-footer:hover {
+    color: $main-blue-color;
+  }
+
+  &__link:hover::before {
+    background-color: $main-blue-color;
+  }
 }

@@ -6,6 +6,12 @@
   &__list {
     display: flex;
     gap: 30px;
+
+    @include onPhone {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+    }
   }
 
   &__item {
@@ -14,6 +20,10 @@
 
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    @include onPhone {
+      width: 450px;
+    }
   }
 
   &__item-image {
@@ -21,6 +31,11 @@
 
     width: 270px;
     height: 260px;
+
+    @include onPhone {
+      width: 450px;
+      height: 460px;
+    }
   }
 
   &__content-name {

@@ -1,6 +1,13 @@
 .hero__container {
   display: flex;
   justify-content: center;
+
+  @include onPhone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+  }
 }
 
 .hero {
@@ -18,10 +25,16 @@
     url("../images/hero/hero_image.jpg"), $background-black-color;
 
   background-repeat: no-repeat;
-  background-size: 100%, cover, 100%;
+  background-size: cover;
   background-position: center 35%;
 
   width: 1600px;
+
+  @include onPhone {
+    width: 480px;
+
+    margin: 0 0 60px 0;
+  }
 
   &__title {
     margin: 0 0 30px;
@@ -34,6 +47,12 @@
     text-transform: uppercase;
 
     width: 696px;
+
+    @include onPhone {
+      @include font-settings($l-height: 42px, $l-spacing: 1.56px);
+      @include font-style(#fff, 26px, 900);
+      width: 360px;
+    }
   }
 
   &__button {
