@@ -1,0 +1,68 @@
+.subscription {
+  &__form {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 12px;
+  }
+
+  &__content-mail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__form_input {
+    padding: 15px 16px;
+
+    @include border-settings(1px solid rgba(255, 255, 255, 0.3), 4px);
+
+    background: rgba(33, 150, 243, 0);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    width: 358px;
+    height: 50px;
+
+    color: #fff;
+    transition: border 250ms $cubic-bezier-easing;
+  }
+
+  &__form_input:hover {
+    border: 1px solid $main-blue-color;
+  }
+
+  &__form_label {
+    @include font-style(#fff, 14px, 700);
+
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+  }
+
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 16px;
+    @include font-settings($l-height: 20px, $l-spacing: 0.48px);
+  }
+
+  &__button {
+    @include flexbox;
+    gap: 10px;
+
+    width: 200px;
+    height: 50px;
+
+    @include border-settings(1px solid $main-blue-color, 4px);
+    background: $main-blue-color;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    @include font-style(#fff, 16px, 700);
+    line-height: 30px;
+    letter-spacing: 0.96px;
+  }
+
+  &__svg-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

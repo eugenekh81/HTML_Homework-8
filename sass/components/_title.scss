@@ -1,0 +1,6 @@
+.title {
+  text-align: center;
+  letter-spacing: 1.08px;
+
+  @include font-style($text-black-color, 36px, 700);
+}

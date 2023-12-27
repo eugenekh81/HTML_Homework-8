@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  gap: 93px;
+
+  &__item {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    @include font-style($text-black-color, 14px, 500);
+
+    letter-spacing: 0.28px;
+
+    transition: color 250ms $cubic-bezier-easing;
+  }
+
+  &__link:focus,
+  &__link:hover {
+    color: $main-blue-color;
+  }
+}

@@ -1,0 +1,31 @@
+.footer {
+  padding: 60px 0;
+
+  background-color: $background-black-color;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 94px;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address {
+  @include font-style(#fff, 14px);
+  @include font-settings($l-height: 20px, $l-spacing: 0.42px);
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  max-width: max-content;
+}

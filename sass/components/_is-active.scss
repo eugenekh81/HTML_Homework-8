@@ -1,0 +1,16 @@
+.is-active {
+  position: relative;
+}
+
+.is-active:before {
+  content: "";
+  position: absolute;
+
+  bottom: -1px;
+
+  background-color: $main-blue-color;
+  border-radius: 2px;
+
+  width: 100%;
+  height: 4px;
+}

@@ -1,0 +1,42 @@
+.features__title--hidden {
+  display: none;
+}
+
+.features__list {
+  display: flex;
+  gap: 30px;
+}
+
+.features__item {
+  width: 270px;
+}
+
+.features__icon {
+  @include feature-icons-size;
+}
+
+.features__icon-background {
+  margin: 0 0 30px;
+
+  @include flexbox;
+
+  height: 120px;
+
+  border-radius: 4px;
+  background-color: $background-grey-color;
+}
+
+.features__item-title {
+  margin: 0 0 10px;
+
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+
+  @include font-style($text-black-color, 14px, 700);
+}
+
+.features__item-text {
+  @include font-settings($l-height: 24px, $l-spacing: 0.42px);
+
+  @include font-style($text-grey-color, 14px);
+}

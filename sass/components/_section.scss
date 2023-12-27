@@ -1,0 +1,15 @@
+.section {
+  padding: 94px 0;
+
+  &__title {
+    margin: 0 0 50px;
+  }
+
+  &--grey {
+    background-color: $background-grey-color;
+  }
+
+  &--pd-btm-0 {
+    padding-bottom: 0;
+  }
+}

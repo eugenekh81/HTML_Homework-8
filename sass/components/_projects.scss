@@ -1,0 +1,42 @@
+.projects {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    transition: box-shadow 250ms $cubic-bezier-easing;
+  }
+
+  &__image {
+    display: block;
+
+    width: 370px;
+    height: 294px;
+  }
+
+  &__item-content {
+    padding: 20px 24px;
+
+    border: 1px solid #eee;
+    border-top: none;
+  }
+
+  &__content-name {
+    line-height: 36px;
+    letter-spacing: 1.08px;
+
+    @include font-style($text-black-color, 18px, 700);
+  }
+
+  &__content-text {
+    @include font-style($text-grey-color, 16px);
+    @include font-settings($l-height: 30px, $l-spacing: 0.48px);
+  }
+
+  &__item:hover {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+}
