@@ -39,6 +39,12 @@
 
 @mixin onPhone {
   @media screen and (max-width: 480px) {
-    @content
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    @content;
   }
 }

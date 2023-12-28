@@ -10,7 +10,17 @@
     width: 480px;
 
     flex-direction: column;
+  }
 
-    max-width: 480px;
+  &__filter {
+    display: flex;
+    justify-content: center;
+
+    @include onPhone {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 15px;
+    }
   }
 }
+

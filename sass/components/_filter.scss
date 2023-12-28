@@ -3,7 +3,12 @@
 
   display: flex;
   gap: 8px;
-  justify-content: center;
+
+  @include onPhone {
+    display: flex;
+    flex-wrap: wrap;
+    width: 326px;
+  }
 }
 
 .filter__button {
