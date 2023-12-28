@@ -19,12 +19,7 @@
 
     @include onTablet {
       display: flex;
-      justify-content: space-around;
-
-    //  > :last-child {
-    //   display: flex;
-    //   align-items: center;
-    //   }
+      justify-content: space-between;
     }
   }
 }

@@ -4,6 +4,10 @@
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+
+    @include onTablet {
+      justify-content: flex-start;
+    }
   }
 
   &__item {
@@ -19,6 +23,10 @@
     @include onPhone {
       width: 450px;
     }
+
+    @include onTablet {
+      width: 354px;
+    }
   }
 
   &__item-content {
@@ -26,6 +34,10 @@
 
     border: 1px solid #eee;
     border-top: none;
+
+    @include onTablet {
+      height: 143px;
+    }
   }
 
   &__content-name {
@@ -33,6 +45,10 @@
     letter-spacing: 1.08px;
 
     @include font-style($text-black-color, 18px, 700);
+
+    @include onTablet {
+      width: 304px;
+    }
   }
 
   &__content-text {

@@ -13,11 +13,12 @@
   }
 
   @include onTablet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 
     width: 768px;
+    padding: 0 15px 0 15px;
   }
 
   &__filter {
