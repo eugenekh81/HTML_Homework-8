@@ -8,6 +8,12 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  @include onTablet {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .client-icons__item {
@@ -20,6 +26,10 @@
 
   @include onPhone {
     width: 210px;
+  }
+
+  @include onTablet {
+    width: 226px
   }
 }
 

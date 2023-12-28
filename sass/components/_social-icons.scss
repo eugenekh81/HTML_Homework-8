@@ -7,6 +7,9 @@
   @include onPhone {
     text-align: center;
   }
+  @include onTablet {
+    text-align: center;
+  }
 
   &__title {
     letter-spacing: 0.42px;

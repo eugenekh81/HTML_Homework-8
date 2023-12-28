@@ -3,6 +3,10 @@
     display: none;
   }
 
+  @include onTablet {
+    display: none;
+  }
+
   &__list {
     display: flex;
     gap: 30px;

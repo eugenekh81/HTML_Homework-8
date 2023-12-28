@@ -16,6 +16,14 @@
       flex-direction: column;
       flex-wrap: wrap;
     }
+
+    @include onTablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      width: 738;
+    }
   }
 
   &__item {
@@ -23,6 +31,10 @@
 
     @include onPhone {
       width: 450px;
+    }
+
+    @include onTablet {
+      width: 354px;
     }
   }
 

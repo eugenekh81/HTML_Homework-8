@@ -8,6 +8,17 @@
   @include onPhone {
     display: none;
   }
+
+  @include onTablet {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    height: fit-content;
+    width: 138px;
+    
+  }
+
   &__link {
     display: flex;
     align-items: center;
@@ -17,6 +28,10 @@
     letter-spacing: 0.28px;
 
     transition: color 250ms $cubic-bezier-easing;
+
+    @include onTablet {
+      @include font-style ($text-grey-color, 12px, 500);
+    }
   }
 
   &__link--footer {

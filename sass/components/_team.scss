@@ -1,6 +1,7 @@
 .team {
   &--grey {
     background-color: $background-grey-color;
+    
   }
 
   &__list {
@@ -10,7 +11,12 @@
     @include onPhone {
       display: flex;
       flex-direction: column;
-      width: fit-content;
+    }
+
+    @include onTablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
@@ -24,6 +30,10 @@
     @include onPhone {
       width: 450px;
     }
+    @include onTablet {
+      width: 354px;
+      height: 536px;
+    }
   }
 
   &__item-image {
@@ -35,6 +45,10 @@
     @include onPhone {
       width: 450px;
       height: 460px;
+    }
+    @include onTablet {
+      width: 354px;
+      height: 374px;
     }
   }
 

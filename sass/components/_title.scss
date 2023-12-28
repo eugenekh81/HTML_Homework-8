@@ -3,4 +3,9 @@
   letter-spacing: 1.08px;
 
   @include font-style($text-black-color, 36px, 700);
+
+  @include onTablet {
+    @include font-style($text-black-color, 28px, 700);
+
+  }
 }

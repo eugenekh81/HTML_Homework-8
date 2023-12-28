@@ -12,6 +12,14 @@
     flex-direction: column;
   }
 
+  @include onTablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 768px;
+  }
+
   &__filter {
     display: flex;
     justify-content: center;
@@ -23,4 +31,3 @@
     }
   }
 }
-

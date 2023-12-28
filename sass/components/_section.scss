@@ -1,5 +1,9 @@
 .section {
   padding: 94px 0 94px 0;
+
+  @include onTablet {
+    padding: 60px 0 60px 0;
+  }
   
   &__title {
     display: block;
@@ -20,11 +24,15 @@
 
   &--pd-btm-0 {
     padding-bottom: 0;
-  }
 
-  &--pd-60 {
-    @include onPhone {
-      padding: 60px 0 60px 0;
+    @include onTablet {
+      padding-bottom: 60px;
     }
   }
+
+  // &--pd-60 {
+  //   @include onPhone {
+  //     padding: 60px 0 60px 0;
+  //   }
+  // }
 }
