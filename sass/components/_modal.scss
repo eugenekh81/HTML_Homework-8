@@ -20,6 +20,9 @@
   @include onPhone {
     width: 450px;
   }
+  @include onTablet {
+    width: 450px; 
+  }
   &__icons_svg {
     width: 18px;
     height: 18px;
@@ -148,6 +151,10 @@
       @include font-settings($l-height: normal, $l-spacing: 0.36px);
       @include font-style($text-grey-color, $font-size: 12px);
     }
+    @include onTablet {
+      @include font-settings($l-height: normal, $l-spacing: 0.36px);
+      @include font-style($text-grey-color, $font-size: 12px);
+    }
   }
 
   &__checkbox_link {
@@ -159,6 +166,10 @@
     order: -1;
 
     @include onPhone {
+      @include font-settings($l-height: normal, $l-spacing: 0.36px);
+      @include font-style($main-blue-color, $font-size: 12px);
+    }
+    @include onTablet {
       @include font-settings($l-height: normal, $l-spacing: 0.36px);
       @include font-style($main-blue-color, $font-size: 12px);
     }
