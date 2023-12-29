@@ -1,11 +1,4 @@
 .services {
-  @include onPhone {
-    display: none;
-  }
-
-  @include onTablet {
-    display: none;
-  }
 
   &__list {
     display: flex;

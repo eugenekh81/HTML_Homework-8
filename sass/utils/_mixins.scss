@@ -38,13 +38,13 @@
 // adaptive
 
 @mixin onPhone {
-  @media screen and (max-width: 480px) {
+  @media screen and (min-width: 480px) {
     @content;
   }
 }
 
 @mixin onTablet {
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }

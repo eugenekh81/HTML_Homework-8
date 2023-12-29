@@ -4,11 +4,6 @@
   display: flex;
   gap: 8px;
 
-  @include onPhone {
-    display: flex;
-    flex-wrap: wrap;
-    width: 326px;
-  }
 }
 
 .filter__button {

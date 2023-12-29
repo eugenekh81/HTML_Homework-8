@@ -4,24 +4,6 @@
     flex-direction: row;
     align-items: end;
     gap: 12px;
-
-    @include onPhone {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-
-      text-align: center;
-    }
-
-    @include onTablet {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      text-align: center;
-    }
   }
 
   &__content-mail {
@@ -43,10 +25,6 @@
 
     color: #fff;
     transition: border 250ms $cubic-bezier-easing;
-
-    @include onPhone {
-      width: 450px;
-    }
   }
 
   &__form_input:hover {
@@ -57,10 +35,6 @@
     @include font-style(#fff, 14px, 700);
     letter-spacing: 0.42px;
     text-transform: uppercase;
-
-    @include onPhone {
-      width: 450px;
-    }
   }
 
   input::placeholder {

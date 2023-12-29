@@ -1,19 +1,6 @@
 .client-icons__list {
   display: flex;
   gap: 30px;
-
-  @include onPhone {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  @include onTablet {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
 }
 
 .client-icons__item {
@@ -23,14 +10,6 @@
   @include border-settings(1px solid $svg-grey-color, 4px);
 
   transition: border-color 250ms $cubic-bezier-easing;
-
-  @include onPhone {
-    width: 210px;
-  }
-
-  @include onTablet {
-    width: 226px
-  }
 }
 
 .client-icons__link {

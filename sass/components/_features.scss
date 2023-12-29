@@ -1,7 +1,4 @@
 .features {
-  @include onPhone {
-    padding: 0 0 60px 0;
-  }
 
   &__title--hidden {
     display: none;
@@ -10,31 +7,10 @@
   &__list {
     display: flex;
     gap: 30px;
-
-    @include onPhone {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-    }
-
-    @include onTablet {
-      display: flex;
-      flex-wrap: wrap;
-
-      width: 738;
-    }
   }
 
   &__item {
     width: 270px;
-
-    @include onPhone {
-      width: 450px;
-    }
-
-    @include onTablet {
-      width: 354px;
-    }
   }
 
   &__icon {
@@ -59,9 +35,6 @@
     text-transform: uppercase;
 
     @include font-style($text-black-color, 14px, 700);
-    @include onPhone {
-      text-align: center;
-    }
   }
 
   &__item-text {

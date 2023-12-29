@@ -16,13 +16,6 @@
 
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-
-  @include onPhone {
-    width: 450px;
-  }
-  @include onTablet {
-    width: 450px; 
-  }
   &__icons_svg {
     width: 18px;
     height: 18px;
@@ -146,15 +139,6 @@
 
     @include font-settings($l-height: 24px, $l-spacing: 0.42px);
     @include font-style($text-grey-color, $font-size: 14px);
-
-    @include onPhone {
-      @include font-settings($l-height: normal, $l-spacing: 0.36px);
-      @include font-style($text-grey-color, $font-size: 12px);
-    }
-    @include onTablet {
-      @include font-settings($l-height: normal, $l-spacing: 0.36px);
-      @include font-style($text-grey-color, $font-size: 12px);
-    }
   }
 
   &__checkbox_link {
@@ -164,15 +148,6 @@
     @include font-settings($l-height: 24px, $l-spacing: 0.42px);
 
     order: -1;
-
-    @include onPhone {
-      @include font-settings($l-height: normal, $l-spacing: 0.36px);
-      @include font-style($main-blue-color, $font-size: 12px);
-    }
-    @include onTablet {
-      @include font-settings($l-height: normal, $l-spacing: 0.36px);
-      @include font-style($main-blue-color, $font-size: 12px);
-    }
   }
 
   &__checkbox_icon {

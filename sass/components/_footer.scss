@@ -2,13 +2,6 @@
   padding: 60px 0;
 
   background-color: $background-black-color;
-
-  @include onPhone {
-    width: 480px;
-  }
-  @include onTablet {
-    width: 768;
-  }
 }
 
 .footer__content {
@@ -16,38 +9,12 @@
   flex-direction: row;
   align-items: baseline;
   gap: 94px;
-
-  @include onPhone {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 60px;
-  }
-
-  @include onTablet {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
 }
 
 .footer__info {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  @include onPhone {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @include onTablet {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .address {
@@ -61,17 +28,4 @@
   gap: 9px;
 
   max-width: max-content;
-
-  @include onPhone {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-  }
-  @include onTablet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-  }
 }
