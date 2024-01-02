@@ -1,6 +1,10 @@
 .section {
-  padding: 94px 0 94px 0;
-  
+  padding: 60px 0 60px 0;
+
+  @include onDesktop {
+    padding: 94px 0 94px 0;
+  }
+
   &__title {
     display: block;
     margin: 0 0 50px;
@@ -11,6 +15,8 @@
   }
 
   &--pd-btm-0 {
-    padding-bottom: 0;
+    @include onDesktop {
+      padding-bottom: 0;
+    };
   }
 }

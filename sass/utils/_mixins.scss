@@ -37,14 +37,20 @@
 
 // adaptive
 
-@mixin onPhone {
-  @media screen and (min-width: 480px) {
+ @mixin onPhone {
+  @media screen and (max-width: 480px) {
     @content;
   }
 }
 
 @mixin onTablet {
   @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media screen and (min-width: 1200px) {
     @content;
   }
 }

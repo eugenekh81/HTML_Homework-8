@@ -1,10 +1,25 @@
 .container {
   margin: 0 auto;
+  padding: 0 15px 0 15px;
 
-  width: 1170px;
+  width: 100%;
+  max-width: 480px;
+
+  @include onTablet {
+    max-width: 768px;
+  }
+  @include onDesktop {
+    max-width: 1200px;
+  }
 
   &__filter {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 15px;
+
+    @include onTablet {
+      justify-content: center;
+      padding-left: 0;
+    }
   }
 }

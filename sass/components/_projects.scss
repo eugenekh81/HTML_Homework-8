@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: center;
+    justify-content: start;
   }
 
   &__item {
@@ -13,8 +13,19 @@
   &__image {
     display: block;
 
-    width: 370px;
+    width: 100%;
+    max-width: 450px;
     height: 294px;
+
+    @include onTablet {
+      width: 100%;
+      max-width: 354px;
+    }
+
+    @include onDesktop {
+      width: 100%;
+      max-width: 370px;
+    }
   }
 
   &__item-content {
@@ -22,6 +33,13 @@
 
     border: 1px solid #eee;
     border-top: none;
+
+    @include onTablet {
+      width: 354px;
+    }
+    @include onDesktop {
+      width: 370px;
+    }
   }
 
   &__content-name {
@@ -29,6 +47,10 @@
     letter-spacing: 1.08px;
 
     @include font-style($text-black-color, 18px, 700);
+
+    @include onTablet {
+      width: 306px
+    }
   }
 
   &__content-text {

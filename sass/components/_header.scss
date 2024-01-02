@@ -4,8 +4,11 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    height: 60px;
 
-    height: 80px;
+    @include onTablet {
+      height: 80px;
+    }
   }
+
 }

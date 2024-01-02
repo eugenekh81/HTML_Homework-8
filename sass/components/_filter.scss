@@ -2,15 +2,20 @@
   margin: 0 0 50px;
 
   display: flex;
+  flex-wrap: wrap;
+  width: 326px;
   gap: 8px;
 
+  @include onTablet {
+    width: 575px;
+  }
 }
 
 .filter__button {
   padding: 6px 22px;
 
   @include border-settings(none, 4px);
-  
+
   @include font-style($text-black-color, 16px, 500);
   @include font-settings($l-height: 26px, $l-spacing: 0.48px);
 

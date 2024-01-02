@@ -1,15 +1,37 @@
 .client-icons__list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 450px;
   gap: 30px;
+  justify-content: center;
+
+  @include onTablet {
+    flex-wrap: wrap;
+    max-width: 738px;
+  }
+
+  @include onDesktop {
+max-width: 1200px;
+  }
 }
 
 .client-icons__item {
-  width: 170px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 210px;
   height: 92px;
 
   @include border-settings(1px solid $svg-grey-color, 4px);
 
   transition: border-color 250ms $cubic-bezier-easing;
+
+  @include onTablet {
+    width: 226px;
+  }
+
+  @include onDesktop {
+    width: 170px;
+  }
 }
 
 .client-icons__link {

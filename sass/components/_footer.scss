@@ -6,15 +6,34 @@
 
 .footer__content {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: 94px;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 60px;
+
+
+
+  @include onTablet {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @include onDesktop {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 94px;
+  }
 }
 
 .footer__info {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
+
+  @include onTablet {
+    align-items: center;
+  }
 }
 
 .address {
@@ -26,6 +45,6 @@
   display: flex;
   flex-direction: column;
   gap: 9px;
-
+  align-items: center;
   max-width: max-content;
 }
