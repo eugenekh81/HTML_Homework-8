@@ -3,11 +3,16 @@
 
   display: flex;
   flex-wrap: wrap;
+
   width: 326px;
   gap: 8px;
 
   @include onTablet {
-    width: 575px;
+    width: 738px;
+    justify-content: center;
+  }
+  @include onDesktop {
+    width: 1200px;
   }
 }
 

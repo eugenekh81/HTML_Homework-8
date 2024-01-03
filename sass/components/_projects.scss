@@ -8,6 +8,15 @@
 
   &__item {
     transition: box-shadow 250ms $cubic-bezier-easing;
+    max-width: 450px;
+
+    @include onTablet {
+      max-width: 354px;
+    }
+
+    @include onDesktop {
+      max-width: 370px;
+    }
   }
 
   &__image {
@@ -16,16 +25,6 @@
     width: 100%;
     max-width: 450px;
     height: 294px;
-
-    @include onTablet {
-      width: 100%;
-      max-width: 354px;
-    }
-
-    @include onDesktop {
-      width: 100%;
-      max-width: 370px;
-    }
   }
 
   &__item-content {
@@ -33,6 +32,7 @@
 
     border: 1px solid #eee;
     border-top: none;
+    width: 450px;
 
     @include onTablet {
       width: 354px;
@@ -48,10 +48,6 @@
     letter-spacing: 1.08px;
 
     @include font-style($text-black-color, 18px, 700);
-
-    @include onTablet {
-      width: 306px;
-    }
   }
 
   &__content-text {

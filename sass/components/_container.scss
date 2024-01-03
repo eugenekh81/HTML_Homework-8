@@ -12,19 +12,8 @@
     max-width: 1200px;
   }
 
-  &-flexbox {
+  &--flexbox {
     display: flex;
     justify-content: center;
-  }
-
-  &__filter {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 15px;
-
-    @include onTablet {
-      justify-content: center;
-      padding-left: 0;
-    }
   }
 }

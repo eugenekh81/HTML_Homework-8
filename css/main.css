@@ -42,30 +42,13 @@ ul {
     max-width: 1200px;
   }
 }
-.container-flexbox {
+.container--flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.container__filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding-left: 15px;
-}
-@media screen and (min-width: 768px) {
-  .container__filter {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-left: 0;
-  }
 }
 
 .button {
@@ -818,7 +801,15 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .filter__list {
-    width: 575px;
+    width: 738px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter__list {
+    width: 1200px;
   }
 }
 
@@ -860,6 +851,17 @@ ul {
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .projects__item {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    max-width: 370px;
+  }
 }
 .projects__image {
   display: block;
@@ -867,22 +869,11 @@ ul {
   max-width: 450px;
   height: 294px;
 }
-@media screen and (min-width: 768px) {
-  .projects__image {
-    width: 100%;
-    max-width: 354px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .projects__image {
-    width: 100%;
-    max-width: 370px;
-  }
-}
 .projects__item-content {
   padding: 20px 24px;
   border: 1px solid #eee;
   border-top: none;
+  width: 450px;
 }
 @media screen and (min-width: 768px) {
   .projects__item-content {
@@ -901,11 +892,6 @@ ul {
   color: #212121;
   font-size: 18px;
   font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  .projects__content-name {
-    width: 306px;
-  }
 }
 .projects__content-text {
   color: #757575;
