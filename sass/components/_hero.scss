@@ -1,12 +1,3 @@
-.hero__container {
-  display: flex;
-  justify-content: center;
-
-  @include onPhone {
-    max-width: 480px;
-  }
-}
-
 .hero {
   padding: 100px 0;
 
