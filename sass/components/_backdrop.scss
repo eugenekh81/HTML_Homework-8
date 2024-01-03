@@ -11,14 +11,14 @@
   opacity: 1;
 
   transition: opacity 250ms $cubic-bezier-easing;
-}
 
-.backdrop--hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 
-.backdrop--hidden .modal {
-  transition: transform 250ms $cubic-bezier-easing;
-  transform: translate(-50%, -50%) scale(0);
+  &--hidden .modal {
+    transition: transform 250ms $cubic-bezier-easing;
+    transform: translate(-50%, -50%) scale(0);
+  }
 }

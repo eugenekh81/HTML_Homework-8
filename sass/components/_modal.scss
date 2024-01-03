@@ -17,9 +17,9 @@
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-    @include onDesktop {
-     width: 528px;
-    }
+  @include onDesktop {
+    width: 528px;
+  }
   &__icons_svg {
     width: 18px;
     height: 18px;
@@ -86,7 +86,6 @@
     padding: 12px 42px;
 
     height: 40px;
-
     width: 100%;
   }
 
@@ -156,10 +155,10 @@
     @include font-settings($l-height: normal, $l-spacing: 0.36px);
     @include font-style($main-blue-color, $font-size: 12px);
 
-@include onDesktop {
-  @include font-style($main-blue-color, 14px);
-  @include font-settings($l-height: 24px, $l-spacing: 0.42px);
-}
+    @include onDesktop {
+      @include font-style($main-blue-color, 14px);
+      @include font-settings($l-height: 24px, $l-spacing: 0.42px);
+    }
 
     order: -1;
   }

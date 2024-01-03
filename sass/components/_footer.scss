@@ -2,49 +2,47 @@
   padding: 60px 0;
 
   background-color: $background-black-color;
-}
 
-.footer__content {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-  gap: 60px;
-
-
-
-  @include onTablet {
+  &__content {
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    text-align: center;
+    gap: 60px;
+
+    @include onTablet {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      align-items: baseline;
+      gap: 94px;
+    }
   }
 
-  @include onDesktop {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 94px;
-  }
-}
-
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-
-  @include onTablet {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
+
+    @include onTablet {
+      align-items: center;
+    }
   }
-}
 
-.address {
-  @include font-style(#fff, 14px);
-  @include font-settings($l-height: 20px, $l-spacing: 0.42px);
-}
+  &__address {
+    @include font-style(#fff, 14px);
+    @include font-settings($l-height: 20px, $l-spacing: 0.42px);
+  }
 
-.footer__contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  align-items: center;
-  max-width: max-content;
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+    max-width: max-content;
+  }
 }

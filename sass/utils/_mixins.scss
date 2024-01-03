@@ -37,7 +37,7 @@
 
 // adaptive
 
- @mixin onPhone {
+@mixin onPhone {
   @media screen and (max-width: 480px) {
     @content;
   }

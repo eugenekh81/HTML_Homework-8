@@ -1,5 +1,18 @@
 .contacts {
-  display: flex;
+  display: none;
+
+  @include onTablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  @include onDesktop {
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+  }
 
   gap: 40px;
 
@@ -11,6 +24,21 @@
 
   @include onTablet {
     flex-wrap: wrap;
+  }
+
+  &__icon {
+    margin: 0 10px 0 0;
+    fill: $text-grey-color;
+  }
+
+  &__icon--envelope-size {
+    width: 16px;
+    height: 12px;
+  }
+
+  &__icon--smartphone-size {
+    width: 10px;
+    height: 16px;
   }
 
   &__link {
@@ -31,7 +59,6 @@
     @include font-settings($l-height: 20px, $l-spacing: 0.42px);
 
     width: fit-content;
-    
   }
 
   &__link:focus,
