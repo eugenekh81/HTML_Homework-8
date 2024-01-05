@@ -63,5 +63,11 @@
     padding: 30px 0;
 
     background: #fff;
+
+    height: 162px;
+
+    @include onDesktop {
+      height: 168px;
+    }
   }
 }

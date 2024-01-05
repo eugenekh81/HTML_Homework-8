@@ -552,6 +552,12 @@ ul {
 .team__item-content {
   padding: 30px 0;
   background: #fff;
+  height: 162px;
+}
+@media screen and (min-width: 1200px) {
+  .team__item-content {
+    height: 168px;
+  }
 }
 
 .social-icons {
