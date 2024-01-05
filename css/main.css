@@ -568,6 +568,11 @@ ul {
   gap: 20px;
   margin: 0 0 60px 0;
 }
+@media screen and (min-width: 1200px) {
+  .social-icons {
+    margin: 0;
+  }
+}
 .social-icons__title {
   text-align: center;
   letter-spacing: 0.42px;
@@ -761,6 +766,7 @@ ul {
 }
 @media screen and (min-width: 1200px) {
   .footer__info {
+    margin: 0;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;

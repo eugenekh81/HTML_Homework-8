@@ -27,6 +27,7 @@
     margin: 0 0 60px 0;
 
     @include onDesktop {
+      margin: 0;
       align-items: flex-start;
     }
   }
