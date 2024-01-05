@@ -4,21 +4,19 @@
   background-color: $background-black-color;
 
   &__content {
+    @include onTablet {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    gap: 60px;
-
-    @include onTablet {
-      flex-wrap: wrap;
-      justify-content: space-around;
+    justify-content: space-around;
     }
 
     @include onDesktop {
-      flex-direction: row;
       align-items: baseline;
-      gap: 94px;
+      gap: 93px;
+      flex-wrap: nowrap;
+
+      
     }
   }
 
@@ -27,6 +25,8 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    
+    margin: 0 0 60px 0;
 
     @include onTablet {
       align-items: center;

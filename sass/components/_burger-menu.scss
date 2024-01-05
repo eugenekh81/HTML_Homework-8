@@ -1,0 +1,38 @@
+.burger-menu {
+  border: none;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    &--cross {
+      display: none;
+      height: 18px;
+      width: 18px;
+
+    }
+
+    &--burger {
+      height: 18px;
+      width: 24px;
+    }
+  }
+
+  &.burger--open .burger-menu__icon--cross {
+    display: flex;
+  }
+
+  &.burger--open .burger-menu__icon--burger {
+    display: none;
+  }
+
+  
+@include onTablet {
+
+  display: none;
+}
+}

@@ -35,8 +35,6 @@
     @include onTablet {
       @include font-style(#fff, 26px, 900);
       @include font-settings($l-height: 42px, $l-spacing: 1.56px);
-
-      width: 360px;
     }
 
     @include onDesktop {

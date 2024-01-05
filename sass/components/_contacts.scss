@@ -18,10 +18,6 @@
 
   height: 100%;
 
-  @include onPhone {
-    display: none;
-  }
-
   @include onTablet {
     flex-wrap: wrap;
   }

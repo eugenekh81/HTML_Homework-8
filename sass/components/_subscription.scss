@@ -1,34 +1,26 @@
 .subscription {
   &__form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     text-align: center;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 12px;
-
-    @include onTablet {
-      flex-direction: column;
-      align-items: center;
-    }
 
     @include onDesktop {
-      flex-direction: row;
-      align-items: end;
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
     }
   }
 
   &__content-mail {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    margin-bottom: 20px;
+
+    @include onDesktop {
+      margin-bottom: 0;
+    }
   }
 
   &__form_input {
     padding: 15px 16px;
-    width: 450px;
+    width: 100%;
+
     height: 50px;
 
     @include border-settings(1px solid rgba(255, 255, 255, 0.3), 4px);
@@ -39,6 +31,9 @@
     color: #fff;
     transition: border 250ms $cubic-bezier-easing;
 
+    @include onTablet {
+      width: 450px;
+    }
     @include onDesktop {
       max-width: 358px;
     }
@@ -49,6 +44,10 @@
   }
 
   &__form_label {
+    display: block;
+    margin: 0 0 20px 0;
+    text-align: center;
+
     @include font-style(#fff, 14px, 700);
     letter-spacing: 0.42px;
     text-transform: uppercase;
@@ -62,8 +61,7 @@
   }
 
   &__button {
-    @include flexbox;
-    gap: 10px;
+    display: inline-block;
 
     width: 200px;
     height: 50px;

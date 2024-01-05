@@ -30,11 +30,9 @@
     vertical-align: top;
     width: 100%;
     max-width: 450px;
-    height: 460px;
 
     @include onTablet {
       max-width: 354px;
-      height: 374px;
     }
 
     @include onDesktop {
