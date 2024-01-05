@@ -11,6 +11,10 @@
     text-transform: uppercase;
 
     @include font-style(#fff, 14px, 700);
+
+    @include onDesktop {
+      text-align: start;
+    }
   }
 
   &__list {

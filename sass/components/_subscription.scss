@@ -51,6 +51,10 @@
     @include font-style(#fff, 14px, 700);
     letter-spacing: 0.42px;
     text-transform: uppercase;
+
+    @include onDesktop {
+      text-align: start;
+    }
   }
 
   input::placeholder {
