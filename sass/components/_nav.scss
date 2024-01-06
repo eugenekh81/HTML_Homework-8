@@ -1,10 +1,9 @@
 .nav {
   display: none;
-  gap: 93px;
 
   @include onTablet {
     display: flex;
-    gap: 50px;
+    // gap: 50px;
   }
 
   &__item {
@@ -13,14 +12,26 @@
 
   &__list {
     display: flex;
-    gap: 50px;
+    flex-direction: column;
+    gap: 32px;
+
+    @include onTablet {
+      flex-direction: row;
+      gap: 50px;
+    }
   }
 
   &__link {
     display: flex;
     align-items: center;
 
-    @include font-style($text-black-color, 14px, 500);
+    @include font-style($text-black-color, 40px, 500);
+    
+
+    @include onTablet {
+      font-size: 14px;
+    }
+
 
     letter-spacing: 0.28px;
 
@@ -30,5 +41,39 @@
   &__link:focus,
   &__link:hover {
     color: $main-blue-color;
+  }
+}
+
+.nav-mobile {
+  display: none;
+
+  @include onTablet {
+    display: flex;
+justify-content: space-between;
+    width: 100%;
+    max-width: 765;
+  }
+}
+
+.nav-mobile--open {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  padding: 48px 40px 48px 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 306px;
+
+  background-color: #fff;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 2;
+
+  @include onTablet {
+    display: none;
   }
 }

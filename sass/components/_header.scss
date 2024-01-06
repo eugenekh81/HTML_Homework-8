@@ -10,6 +10,12 @@
     @include onTablet {
       align-items:stretch ;
       height: 80px;
+
+      gap: 88px;
+    }
+
+    @include onDesktop {
+      gap: 93px;
     }
   }
 }

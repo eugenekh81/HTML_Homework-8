@@ -1,5 +1,7 @@
 .is-active {
-  position: relative;
+  @include onTablet {
+    position: relative;
+  }
 }
 
 .is-active:before {
