@@ -53,6 +53,10 @@
       @include font-style($main-blue-color, 34px, 500);
 
       order: -1;
+
+      @include onTablet {
+        order: 0;
+      }
     }
 
     @include onTablet {

@@ -431,6 +431,13 @@ ul {
           order: -1;
 }
 @media screen and (min-width: 768px) {
+  .contacts__link--number {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+@media screen and (min-width: 768px) {
   .contacts__link {
     display: -webkit-box;
     display: -ms-flexbox;
