@@ -1,24 +1,56 @@
-(() => {
+document.addEventListener("DOMContentLoaded", () => {
   const refs = {
     openModalBtn: document.querySelector("[data-modal-open]"),
     closeModalBtn: document.querySelector("[data-modal-close]"),
     modal: document.querySelector("[data-modal]"),
     burger: document.querySelector(".burger-menu"),
-    navMenu: document.querySelector("[data-nav-open]"),
+    navMenu: document.querySelector(".nav-mobile"),
+    navContent: document.querySelector(".nav__content"),
   };
 
-  refs.navMenu.classList.add("nav-mobile");
+  if (refs.openModalBtn) {
+    refs.openModalBtn.addEventListener("click", toggleModal);
+  }
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-  refs.burger.addEventListener("click", toggleBurger);
+  if (refs.closeModalBtn) {
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+  }
+
+  if (refs.burger) {
+    refs.burger.addEventListener("click", toggleBurger);
+  }
 
   function toggleModal() {
-    refs.modal.classList.toggle("backdrop--hidden");
+    if (refs.modal) {
+      refs.modal.classList.toggle("backdrop--hidden");
+    }
   }
 
   function toggleBurger() {
-    refs.burger.classList.toggle("burger--open");
-    refs.navMenu.classList.toggle("nav-mobile--open");
+    if (refs.burger && refs.navMenu && refs.navContent) {
+      refs.burger.classList.toggle("burger--open");
+      refs.navMenu.classList.toggle("nav-mobile--open");
+
+      const isBurgerOpen = refs.burger.classList.contains("burger--open");
+      const isMobile = window.innerWidth < 768;
+
+      refs.navContent.style.display = isBurgerOpen && isMobile ? "flex" : "none";
+    }
   }
-})();
+
+  window.addEventListener("resize", handleResize);
+
+  function handleResize() {
+    if (window.innerWidth >= 768 && refs.burger && refs.navMenu && refs.navContent) {
+      refs.burger.classList.remove("burger--open");
+      refs.navMenu.classList.remove("nav-mobile--open");
+      refs.navContent.style.display = "flex";
+    } else {
+      if (!refs.burger || !refs.burger.classList.contains("burger--open")) {
+        if (refs.navContent) {
+          refs.navContent.style.display = "none";
+        }
+      }
+    }
+  }
+});

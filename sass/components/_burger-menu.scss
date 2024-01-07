@@ -1,4 +1,8 @@
 .burger-menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,11 +21,11 @@
 
     width: 24px;
     height: 20px;
+
     &--cross {
-      position: fixed;
+      position: absolute;
       top: 10px;
       right: 10px;
-
 
       display: none;
       height: 19px;

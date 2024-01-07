@@ -118,14 +118,33 @@ ul {
   color: #fff;
 }
 
-.nav {
-  display: none;
-}
 @media screen and (min-width: 768px) {
   .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+.nav__content {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .nav__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
   }
 }
 .nav__item {
@@ -142,14 +161,19 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 32px;
+  padding: 0 0 300px 0;
 }
 @media screen and (min-width: 768px) {
   .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 50px;
+    padding: 0;
   }
 }
 .nav__link {
@@ -175,9 +199,6 @@ ul {
   color: #2196f3;
 }
 
-.nav-mobile {
-  display: none;
-}
 @media screen and (min-width: 768px) {
   .nav-mobile {
     display: -webkit-box;
@@ -190,7 +211,6 @@ ul {
     max-width: 765;
   }
 }
-
 .nav-mobile--open {
   position: fixed;
   top: 0;
@@ -214,8 +234,51 @@ ul {
     display: none;
   }
 }
+.nav-mobile__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .nav-mobile__list {
+    display: none;
+  }
+}
+.nav-mobile__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.nav-mobile__link {
+  color: #2196f3;
+  font-size: 18px;
+  font-weight: 500;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.nav-mobile__item:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
+  margin: 0 10px 0 10px;
+}
 
 .burger-menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,7 +309,7 @@ ul {
   height: 20px;
 }
 .burger-menu__icon--cross {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   display: none;
@@ -279,12 +342,18 @@ ul {
 
 .is-active:before {
   content: "";
-  position: absolute;
-  bottom: -1px;
-  background-color: #2196f3;
-  border-radius: 2px;
-  width: 100%;
-  height: 4px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .is-active:before {
+    position: absolute;
+    bottom: -1px;
+    background-color: #2196f3;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    display: inline-block;
+  }
 }
 
 .contacts {
@@ -295,6 +364,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0 0 64px 0;
   gap: 40px;
   height: 100%;
 }
@@ -308,6 +378,7 @@ ul {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 10px;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -317,9 +388,6 @@ ul {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 30px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
@@ -355,6 +423,9 @@ ul {
   color: #2196f3;
   font-size: 34px;
   font-weight: 500;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 @media screen and (min-width: 768px) {
   .contacts__link {
