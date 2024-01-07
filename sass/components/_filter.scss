@@ -1,19 +1,23 @@
 .filter {
+
+  display: flex;
   &__list {
     margin: 0 0 50px;
 
     display: flex;
     flex-wrap: wrap;
 
-    width: 326px;
+    max-width: 326px;
     gap: 8px;
 
     @include onTablet {
-      width: 738px;
+      width: 100%;
+      max-width: 768px;
       justify-content: center;
     }
     @include onDesktop {
-      width: 1200px;
+      width: 100%;
+      max-width: 1200px;
     }
   }
 
