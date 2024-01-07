@@ -548,7 +548,7 @@ ul {
   }
 }
 .hero__button {
-  padding: 9px 23px;
+  padding: 9px 23px 9px 23px;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -557,6 +557,11 @@ ul {
   border: 1px solid #2196f3;
   border-radius: 4px;
   background-color: #2196f3;
+}
+@media screen and (min-width: 1200px) {
+  .hero__button {
+    padding: 9px 31px 9px 31px;
+  }
 }
 
 .features__title--hidden {

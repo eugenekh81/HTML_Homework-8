@@ -50,7 +50,7 @@
   }
 
   &__button {
-    padding: 9px 23px;
+    padding: 9px 23px 9px 23px;
 
     @include font-style(#fff, 16px, 700);
     @include font-settings(30px, 0.96px);
@@ -58,5 +58,9 @@
     @include border-settings(1px solid $main-blue-color, 4px);
 
     background-color: $main-blue-color;
+
+    @include onDesktop {
+      padding: 9px 31px 9px 31px;
+    }
   }
 }
