@@ -12,6 +12,8 @@
 
   transition: opacity 250ms $cubic-bezier-easing;
 
+  z-index: 4;
+
   &--hidden {
     opacity: 0;
     pointer-events: none;
