@@ -4,12 +4,11 @@
   &__content {
     position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 60px;
 
     @include onTablet {
-      align-items:stretch ;
+      align-items: stretch;
       height: 80px;
 
       gap: 88px;
