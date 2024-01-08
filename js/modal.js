@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const isBodyOverflowHidden = document.body.style.overflow === "hidden";
 
     if (
-      refs.burger.classList.contains("burger--open") ||
-      !refs.modal.classList.contains("backdrop--hidden")
+      (refs.burger && refs.burger.classList.contains("burger--open")) ||
+      (refs.modal && !refs.modal.classList.contains("backdrop--hidden"))
     ) {
       if (!isBodyOverflowHidden) {
         document.body.style.overflow = "hidden";

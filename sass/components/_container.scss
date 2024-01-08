@@ -16,4 +16,19 @@
     display: flex;
     justify-content: center;
   }
+
+  &-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+
+    @include onTablet {
+      max-width: 768px;
+    }
+    @include onTablet {
+      max-width: 1200px;
+    }
+  }
 }

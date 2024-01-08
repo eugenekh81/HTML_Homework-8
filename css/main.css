@@ -50,6 +50,29 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.container-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .container-filter {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-filter {
+    max-width: 1200px;
+  }
+}
 
 .button {
   cursor: pointer;
@@ -1019,7 +1042,7 @@ ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 326px;
+  max-width: 370px;
   gap: 8px;
 }
 @media screen and (min-width: 768px) {
