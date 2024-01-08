@@ -5,33 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
     modal: document.querySelector("[data-modal]"),
   };
 
-  let isModalOpen = false;
-  let currentOverflow = "";
-
   function toggleScrollLock() {
-    const bodyComputedStyle = window.getComputedStyle(document.body);
+    const body = document.body;
 
-    if (isModalOpen) {
-      if (bodyComputedStyle.overflow !== "hidden") {
-        document.body.style.overflow = "hidden";
-      }
+    if (refs.modal && !refs.modal.classList.contains("backdrop--hidden")) {
+      body.style.overflow = "hidden";
     } else {
-      if (bodyComputedStyle.overflow === "hidden") {
-        document.body.style.overflow = currentOverflow;
-      }
+      body.style.overflow = "";
     }
-  }
-
-  function observeBodyOverflow() {
-    const bodyStyleObserver = new MutationObserver(() => {
-      currentOverflow = window.getComputedStyle(document.body).overflow;
-      toggleScrollLock();
-    });
-
-    const config = { attributes: true, attributeFilter: ["style"] };
-    bodyStyleObserver.observe(document.body, config);
-
-    return bodyStyleObserver;
   }
 
   if (refs.openModalBtn && refs.closeModalBtn) {
@@ -39,12 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     refs.closeModalBtn.addEventListener("click", toggleModal);
   }
 
-  const bodyObserver = observeBodyOverflow();
-
   function toggleModal() {
     if (refs.modal) {
       refs.modal.classList.toggle("backdrop--hidden");
-      isModalOpen = !isModalOpen;
+
       toggleScrollLock();
     }
   }
@@ -52,8 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", handleResize);
 
   function handleResize() {
-    if (isModalOpen && refs.modal) {
-      toggleScrollLock();
-    }
+    toggleScrollLock();
   }
 });
