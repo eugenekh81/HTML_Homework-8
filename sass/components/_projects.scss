@@ -3,7 +3,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: start;
+    justify-content: center;
+
+    @include onTablet {
+      justify-content: start;
+    }
   }
 
   &__item {

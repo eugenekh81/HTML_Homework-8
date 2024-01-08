@@ -209,7 +209,7 @@ ul {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
-    max-width: 765;
+    max-width: 768px;
   }
 }
 .nav-mobile--open {
@@ -1064,9 +1064,16 @@ ul {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .projects__list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 .projects__item {
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
