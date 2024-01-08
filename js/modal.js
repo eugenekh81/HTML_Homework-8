@@ -5,31 +5,54 @@ document.addEventListener("DOMContentLoaded", () => {
     modal: document.querySelector("[data-modal]"),
   };
 
-  function toggleScrollLock() {
-    const isBodyOverflowHidden = document.body.style.overflow === "hidden";
+  let isModalOpen = false;
+  let currentOverflow = "";
 
-    if (refs.modal && !refs.modal.classList.contains("backdrop--hidden")) {
-      if (!isBodyOverflowHidden) {
+  function toggleScrollLock() {
+    const bodyComputedStyle = window.getComputedStyle(document.body);
+
+    if (isModalOpen) {
+      if (bodyComputedStyle.overflow !== "hidden") {
         document.body.style.overflow = "hidden";
       }
     } else {
-      if (isBodyOverflowHidden) {
-        document.body.style.overflow = "";
+      if (bodyComputedStyle.overflow === "hidden") {
+        document.body.style.overflow = currentOverflow;
       }
     }
   }
 
-  if (refs.openModalBtn) {
-    refs.openModalBtn.addEventListener("click", toggleModal);
+  function observeBodyOverflow() {
+    const bodyStyleObserver = new MutationObserver(() => {
+      currentOverflow = window.getComputedStyle(document.body).overflow;
+      toggleScrollLock();
+    });
+
+    const config = { attributes: true, attributeFilter: ["style"] };
+    bodyStyleObserver.observe(document.body, config);
+
+    return bodyStyleObserver;
   }
 
-  if (refs.closeModalBtn) {
+  if (refs.openModalBtn && refs.closeModalBtn) {
+    refs.openModalBtn.addEventListener("click", toggleModal);
     refs.closeModalBtn.addEventListener("click", toggleModal);
   }
+
+  const bodyObserver = observeBodyOverflow();
 
   function toggleModal() {
     if (refs.modal) {
       refs.modal.classList.toggle("backdrop--hidden");
+      isModalOpen = !isModalOpen;
+      toggleScrollLock();
+    }
+  }
+
+  window.addEventListener("resize", handleResize);
+
+  function handleResize() {
+    if (isModalOpen && refs.modal) {
       toggleScrollLock();
     }
   }
