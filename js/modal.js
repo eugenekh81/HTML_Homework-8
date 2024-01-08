@@ -5,14 +5,31 @@ document.addEventListener("DOMContentLoaded", () => {
     modal: document.querySelector("[data-modal]"),
   };
 
+  let isModalOpen = false;
+  let isScrollLockEnabled = false;
+
   function toggleScrollLock() {
     const body = document.body;
+    const isOverflowHidden = body.style.overflow === "hidden";
 
-    if (refs.modal && !refs.modal.classList.contains("backdrop--hidden")) {
+    if (isModalOpen && !isOverflowHidden && !isScrollLockEnabled) {
       body.style.overflow = "hidden";
-    } else {
+      isScrollLockEnabled = true;
+    } else if (!isModalOpen && isOverflowHidden && isScrollLockEnabled) {
       body.style.overflow = "";
+      isScrollLockEnabled = false;
     }
+  }
+
+  function observeBodyOverflow() {
+    const bodyStyleObserver = new MutationObserver(() => {
+      toggleScrollLock();
+    });
+
+    const config = { attributes: true, attributeFilter: ["style"] };
+    bodyStyleObserver.observe(document.body, config);
+
+    return bodyStyleObserver;
   }
 
   if (refs.openModalBtn && refs.closeModalBtn) {
@@ -20,17 +37,26 @@ document.addEventListener("DOMContentLoaded", () => {
     refs.closeModalBtn.addEventListener("click", toggleModal);
   }
 
+  const bodyObserver = observeBodyOverflow();
+
   function toggleModal() {
     if (refs.modal) {
       refs.modal.classList.toggle("backdrop--hidden");
+      isModalOpen = !isModalOpen;
 
       toggleScrollLock();
+
+      if (!isModalOpen) {
+        window.removeEventListener("keydown", handleKeyDown);
+      } else {
+        window.addEventListener("keydown", handleKeyDown);
+      }
     }
   }
 
-  window.addEventListener("resize", handleResize);
-
-  function handleResize() {
-    toggleScrollLock();
+  function handleKeyDown(event) {
+    if (event.key === "Escape") {
+      toggleModal();
+    }
   }
 });

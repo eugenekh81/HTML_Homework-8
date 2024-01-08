@@ -5,17 +5,19 @@ document.addEventListener("DOMContentLoaded", () => {
     navContent: document.querySelector(".nav__content"),
   };
 
-  function toggleScrollLock() {
-    const isBodyOverflowHidden = document.body.style.overflow === "hidden";
+  let isNavMenuOpen = false;
+  let isScrollLockEnabled = false;
 
-    if (refs.burger && refs.burger.classList.contains("burger--open")) {
-      if (!isBodyOverflowHidden) {
-        document.body.style.overflow = "hidden";
-      }
-    } else {
-      if (isBodyOverflowHidden) {
-        document.body.style.overflow = "";
-      }
+  function toggleScrollLock() {
+    const body = document.body;
+    const isOverflowHidden = body.style.overflow === "hidden";
+
+    if (isNavMenuOpen && !isOverflowHidden && !isScrollLockEnabled) {
+      body.style.overflow = "hidden";
+      isScrollLockEnabled = true;
+    } else if (!isNavMenuOpen && isOverflowHidden && isScrollLockEnabled) {
+      body.style.overflow = "";
+      isScrollLockEnabled = false;
     }
   }
 
@@ -34,11 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
       refs.navContent.style.display =
         isBurgerOpen && isMobile ? "flex" : "none";
 
+      isNavMenuOpen = isBurgerOpen;
+
       toggleScrollLock();
     }
   }
-
-  window.addEventListener("resize", handleResize);
 
   function handleResize() {
     if (
@@ -50,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       refs.burger.classList.remove("burger--open");
       refs.navMenu.classList.remove("nav-mobile--open");
       refs.navContent.style.display = "flex";
+      isNavMenuOpen = false;
     } else {
       if (!refs.burger || !refs.burger.classList.contains("burger--open")) {
         if (refs.navContent) {
@@ -59,4 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     toggleScrollLock();
   }
+
+  window.addEventListener("resize", handleResize);
+
+  handleResize();
 });
