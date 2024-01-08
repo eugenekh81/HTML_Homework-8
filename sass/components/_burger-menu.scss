@@ -1,7 +1,7 @@
 .burger-menu {
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 0;
 
   display: flex;
   justify-content: center;
@@ -24,12 +24,8 @@
 
     &--cross {
       position: absolute;
-      top: 10px;
-      right: 10px;
 
       display: none;
-      height: 19px;
-      width: 19px;
     }
 
     &--burger {
@@ -38,11 +34,20 @@
     }
   }
 
-  &.burger--open .burger-menu__icon--cross {
-    display: flex;
+  &.burger--open {
+    position: absolute;
+    top: 10px;
+    right: 15px;
   }
 
-  &.burger--open .burger-menu__icon--burger {
+  &.burger--open &__icon--cross {
+    display: flex;
+
+    height: 19px;
+    width: 19px;
+  }
+
+  &.burger--open &__icon--burger {
     display: none;
   }
 

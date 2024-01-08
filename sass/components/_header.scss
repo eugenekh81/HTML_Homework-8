@@ -2,6 +2,7 @@
   border: 1px solid #ececec;
 
   &__content {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
