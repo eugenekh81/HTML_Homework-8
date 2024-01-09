@@ -6,12 +6,10 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 
-    @include onTablet {
-      gap: 30px;
-    }
     @include onDesktop {
-      flex-direction: row;
+     
     }
   }
 

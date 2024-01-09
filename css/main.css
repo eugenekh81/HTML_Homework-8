@@ -602,19 +602,7 @@ ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-@media screen and (min-width: 768px) {
-  .features__list {
-    gap: 30px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .features__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+  gap: 30px;
 }
 .features__item {
   width: 450px;
