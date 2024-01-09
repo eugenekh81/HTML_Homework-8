@@ -354,8 +354,9 @@ ul {
   position: absolute;
   top: 10px;
   right: 15px;
+  color: #212121;
 }
-.burger-menu.burger--open .burger-menu__icon--cross {
+.burger--open .burger-menu__icon--cross {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,6 +370,9 @@ ul {
   .burger-menu {
     display: none;
   }
+}
+.burger-menu:hover .burger-menu__icon--cross {
+  color: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
