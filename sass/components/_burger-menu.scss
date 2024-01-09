@@ -38,8 +38,6 @@
     position: absolute;
     top: 10px;
     right: 15px;
-
-    color: #212121;
   }
 
   .burger--open &__icon--cross {
@@ -57,7 +55,7 @@
     display: none;
   }
 
-  &:hover .burger-menu__icon--cross {
-    color: $main-blue-color;
+  & .burger-menu__icon--cross {
+    color: #212121;
   }
 }
