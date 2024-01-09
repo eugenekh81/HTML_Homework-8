@@ -1,0 +1,22 @@
+.section {
+  padding: 60px 0 60px 0;
+
+  @include onDesktop {
+    padding: 94px 0 94px 0;
+  }
+
+  &__title {
+    display: block;
+    margin: 0 0 50px;
+  }
+
+  &--grey {
+    background-color: $background-grey-color;
+  }
+
+  &--pd-btm-0 {
+    @include onDesktop {
+      padding-bottom: 0;
+    };
+  }
+}

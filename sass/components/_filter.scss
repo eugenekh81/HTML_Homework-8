@@ -1,0 +1,46 @@
+.filter {
+
+  display: flex;
+  &__list {
+    margin: 0 0 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    max-width: 370px;
+    gap: 8px;
+
+    @include onTablet {
+      width: 100%;
+      max-width: 768px;
+      justify-content: center;
+    }
+    @include onDesktop {
+      width: 100%;
+      max-width: 1200px;
+    }
+  }
+
+  &__button {
+    padding: 6px 22px;
+
+    @include border-settings(none, 4px);
+
+    @include font-style($text-black-color, 16px, 500);
+    @include font-settings($l-height: 26px, $l-spacing: 0.48px);
+
+    background-color: $background-grey-color;
+
+    transition: color 250ms $cubic-bezier-easing,
+      background-color 250ms $cubic-bezier-easing;
+  }
+
+  &__button:focus,
+  &__button:hover {
+    color: #fff;
+    background-color: $main-blue-color;
+
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+}

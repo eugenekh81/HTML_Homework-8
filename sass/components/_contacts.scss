@@ -1,0 +1,93 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 0 64px 0;
+
+  @include onTablet {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  @include onDesktop {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  gap: 40px;
+
+  height: 100%;
+
+  @include onTablet {
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    margin: 0 10px 0 0;
+    fill: $text-grey-color;
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &__icon--envelope-size {
+    width: 16px;
+    height: 12px;
+  }
+
+  &__icon--smartphone-size {
+    width: 10px;
+    height: 16px;
+  }
+
+  &__link {
+    &--email {
+      @include font-style($text-grey-color, 24px, 500);
+    }
+
+    &--number {
+      @include font-style($main-blue-color, 34px, 500);
+
+      order: -1;
+
+      @include onTablet {
+        order: 0;
+      }
+    }
+
+    @include onTablet {
+      display: flex;
+      align-items: center;
+
+      @include font-style($text-grey-color, 14px, 500);
+
+      letter-spacing: 0.28px;
+
+      transition: color 250ms $cubic-bezier-easing;
+    }
+  }
+
+  &__link--footer {
+    display: flex;
+    color: rgba(255, 255, 255, 0.6);
+
+    @include font-settings($l-height: 20px, $l-spacing: 0.42px);
+
+    width: fit-content;
+  }
+
+  &__link:focus,
+  &__link-footer:focus,
+  &__link:hover,
+  &__link-footer:hover {
+    color: $main-blue-color;
+  }
+
+  &__link:hover::before {
+    background-color: $main-blue-color;
+  }
+}

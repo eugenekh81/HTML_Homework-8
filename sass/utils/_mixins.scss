@@ -1,0 +1,50 @@
+@mixin font-style($font-color, $font-size, $font-weight: 400) {
+  color: $font-color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin flexbox($display: flex, $align: center, $justify: center) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin font-settings($l-height, $l-spacing) {
+  line-height: $l-height;
+  letter-spacing: $l-spacing;
+}
+
+@mixin border-settings($border, $b-radius) {
+  border: $border;
+  border-radius: $b-radius;
+}
+
+@mixin feature-icons-size($width: 70px, $height: 70px) {
+  width: $width;
+  height: $height;
+}
+
+@mixin clients-icons-size($width: 106px, $height: 60px) {
+  width: $width;
+  height: $height;
+}
+
+@mixin social-icons-size($width: 20px, $height: 20px) {
+  width: $width;
+  height: $height;
+}
+
+// adaptive
+
+@mixin onTablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}

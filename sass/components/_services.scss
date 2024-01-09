@@ -1,0 +1,43 @@
+.services {
+  display: none;
+
+  @include onDesktop {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item-image {
+    display: block;
+
+    width: 370px;
+    height: 294px;
+  }
+
+  &__info {
+    position: absolute;
+
+    bottom: 0;
+
+    @include flexbox;
+
+    width: 100%;
+    height: 70px;
+
+    background: rgba(47, 48, 58, 0.8);
+  }
+
+  &__info-text {
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+
+    @include font-style(#fff, 14px, 700);
+  }
+}

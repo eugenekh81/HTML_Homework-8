@@ -1,0 +1,63 @@
+.client-icons {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
+    width: 100%;
+    gap: 30px;
+    justify-content: center;
+
+    @include onTablet {
+      flex-wrap: wrap;
+      max-width: 738px;
+    }
+
+    @include onDesktop {
+      max-width: 1200px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 210px;
+    height: 92px;
+
+    @include border-settings(1px solid $svg-grey-color, 4px);
+
+    transition: border-color 250ms $cubic-bezier-easing;
+
+    @include onTablet {
+      width: 226px;
+    }
+
+    @include onDesktop {
+      width: 170px;
+    }
+  }
+
+  &__link {
+    @include flexbox;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  &__svg {
+    @include clients-icons-size;
+
+    color: $svg-grey-color;
+
+    transition: color 250ms $cubic-bezier-easing;
+  }
+
+  &__item a:focus,
+  &__item:hover {
+    border-color: $main-blue-color;
+  }
+
+  &__item a:focus &__svg,
+  &__item:hover &__svg {
+    color: $main-blue-color;
+  }
+}

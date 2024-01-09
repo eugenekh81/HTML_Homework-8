@@ -1,0 +1,59 @@
+.features {
+  &__title--hidden {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include onTablet {
+      gap: 30px;
+    }
+    @include onDesktop {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    width: 450px;
+
+    @include onTablet {
+      width: 354px;
+    }
+
+    @include onDesktop {
+      width: 270px;
+    }
+  }
+
+  &__icon {
+    @include feature-icons-size;
+  }
+
+  &__icon-background {
+    margin: 0 0 30px;
+
+    @include flexbox;
+
+    height: 120px;
+
+    border-radius: 4px;
+    background-color: $background-grey-color;
+  }
+
+  &__item-title {
+    margin: 0 0 10px;
+
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+
+    @include font-style($text-black-color, 14px, 700);
+  }
+
+  &__item-text {
+    @include font-settings($l-height: 24px, $l-spacing: 0.42px);
+
+    @include font-style($text-grey-color, 14px);
+  }
+}

@@ -1,0 +1,25 @@
+.is-active {
+  @include onTablet {
+    position: relative;
+  }
+}
+
+.is-active:before {
+  content: "";
+
+  display: none;
+
+  @include onTablet {
+    position: absolute;
+
+    bottom: 1px;
+
+    background-color: $main-blue-color;
+    border-radius: 2px;
+
+    width: 100%;
+    height: 4px;
+
+    display: inline-block;
+  }
+}

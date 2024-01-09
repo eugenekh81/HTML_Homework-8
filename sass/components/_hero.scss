@@ -1,0 +1,66 @@
+.hero {
+  padding: 118px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: linear-gradient(
+      90deg,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(47, 48, 58, 0.4) 100%
+    ),
+    url("../images/hero/hero_image.jpg"), $background-black-color;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 35%;
+
+  width: 100%;
+  max-width: 1600px;
+
+  @include onDesktop {
+    padding: 200px 0;
+  }
+  &__title {
+    margin: 0 0 30px;
+    @include font-style(#fff, 26px, 900);
+    @include font-settings($l-height: 42px, $l-spacing: 1.56px);
+
+    text-align: center;
+    text-transform: uppercase;
+
+    max-width: 360px;
+
+    @include onTablet {
+      @include font-style(#fff, 26px, 900);
+      @include font-settings($l-height: 42px, $l-spacing: 1.56px);
+    }
+
+    @include onDesktop {
+      @include font-style(
+        $font-color: #fff,
+        $font-size: 44px,
+        $font-weight: 900
+      );
+      @include font-settings($l-height: 60px, $l-spacing: 2.64px);
+
+      max-width: 696px;
+    }
+  }
+
+  &__button {
+    padding: 9px 23px 9px 23px;
+
+    @include font-style(#fff, 16px, 700);
+    @include font-settings(30px, 0.96px);
+
+    @include border-settings(1px solid $main-blue-color, 4px);
+
+    background-color: $main-blue-color;
+
+    @include onDesktop {
+      padding: 9px 31px 9px 31px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.footer {
+  padding: 60px 0;
+
+  background-color: $background-black-color;
+
+  &__content {
+    @include onTablet {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: space-around;
+    }
+
+    @include onDesktop {
+      align-items: baseline;
+      gap: 93px;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    margin: 0 0 60px 0;
+
+    @include onDesktop {
+      margin: 0;
+      align-items: flex-start;
+    }
+  }
+
+  &__address {
+    @include font-style(#fff, 14px);
+    @include font-settings($l-height: 20px, $l-spacing: 0.42px);
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+    max-width: max-content;
+
+    @include onDesktop {
+      align-items: start;
+    }
+  }
+}

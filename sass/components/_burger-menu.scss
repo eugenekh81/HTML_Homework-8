@@ -1,0 +1,57 @@
+.burger-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 3;
+
+    width: 24px;
+    height: 20px;
+
+    &--cross {
+      position: absolute;
+
+      display: none;
+    }
+
+    &--burger {
+      height: 16px;
+      width: 24px;
+    }
+  }
+
+  &.burger--open {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+
+  &.burger--open &__icon--cross {
+    display: flex;
+
+    height: 19px;
+    width: 19px;
+  }
+
+  &.burger--open &__icon--burger {
+    display: none;
+  }
+
+  @include onTablet {
+    display: none;
+  }
+}

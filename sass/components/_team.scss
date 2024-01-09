@@ -1,0 +1,73 @@
+.team {
+  &--grey {
+    background-color: $background-grey-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 480px;
+    gap: 30px;
+
+    @include onTablet {
+      flex-wrap: wrap;
+      max-width: 768px;
+    }
+    @include onDesktop {
+      max-width: 1200px;
+    }
+  }
+
+  &__item {
+    border-radius: 0px 0px 4px 4px;
+    overflow: hidden;
+
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  &__item-image {
+    vertical-align: top;
+    width: 100%;
+    max-width: 450px;
+
+    @include onTablet {
+      max-width: 354px;
+    }
+
+    @include onDesktop {
+      max-width: 270px;
+      height: 260px;
+    }
+  }
+
+  &__content-name {
+    margin: 0 0 10px;
+
+    text-align: center;
+
+    letter-spacing: 0.48px;
+
+    @include font-style($text-black-color, 16px, 500);
+  }
+
+  &__content-role {
+    margin: 0 0 16px;
+
+    text-align: center;
+    letter-spacing: 0.48px;
+
+    @include font-style($text-grey-color, 16px);
+  }
+  &__item-content {
+    padding: 30px 0;
+
+    background: #fff;
+
+    height: 162px;
+
+    @include onDesktop {
+      height: 168px;
+    }
+  }
+}

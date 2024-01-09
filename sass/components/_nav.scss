@@ -1,0 +1,60 @@
+.nav {
+  @include onTablet {
+    display: flex;
+  }
+
+  &__content {
+    display: none;
+    flex-direction: column;
+
+    @include onTablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      width: 100%;
+    }
+    @include onDesktop {
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    padding: 0 0 300px 0;
+
+    @include onTablet {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+
+      padding: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    @include font-style($text-black-color, 40px, 500);
+
+    @include onTablet {
+      font-size: 14px;
+    }
+
+    letter-spacing: 0.28px;
+
+    transition: color 250ms $cubic-bezier-easing;
+  }
+
+  &__link:focus,
+  &__link:hover {
+    color: $main-blue-color;
+  }
+}

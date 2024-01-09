@@ -1,0 +1,25 @@
+.header {
+  border: 1px solid #ececec;
+
+  @include onTablet {
+    height: 80px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    @include onTablet {
+      align-items: stretch;
+      height: 80px;
+
+      gap: 88px;
+    }
+
+    @include onDesktop {
+      gap: 93px;
+    }
+  }
+}
