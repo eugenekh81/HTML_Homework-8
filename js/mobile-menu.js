@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const refs = {
     burger: document.querySelector(".burger-menu"),
-    navMenu: document.querySelector(".nav-mobile"),
+    navMenu: document.querySelector(".nav"),
     navContent: document.querySelector(".nav__content"),
   };
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function toggleBurger() {
     if (refs.burger && refs.navMenu && refs.navContent) {
       refs.burger.classList.toggle("burger--open");
-      refs.navMenu.classList.toggle("nav-mobile--open");
+      refs.navMenu.classList.toggle("nav--open-mobile");
 
       const isBurgerOpen = refs.burger.classList.contains("burger--open");
       const isMobile = window.innerWidth < 768;
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       refs.navContent
     ) {
       refs.burger.classList.remove("burger--open");
-      refs.navMenu.classList.remove("nav-mobile--open");
+      refs.navMenu.classList.remove("nav--open-mobile");
       refs.navContent.style.display = "flex";
       isNavMenuOpen = false;
     } else {
