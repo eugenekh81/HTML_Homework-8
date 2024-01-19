@@ -1,0 +1,49 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__title {
+    @include text-option($color-white, 700, unset, 14px, 0.42px, unset);
+    text-transform: uppercase;
+  }
+  &__form {
+    display: flex;
+    gap: 12px;
+  }
+  &__input {
+    width: 358px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0 0 0 16px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    color: $color-white-gray;
+    border: 1px solid $color-white-gray;
+    background: #2196f300;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    &:focus {
+      color: $color-white;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    padding: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 4px;
+    background: $color-light-blue;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    @include text-option($color-white, 700, 30px, 16px, 0.96px, unset);
+    &--icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+  }
+}

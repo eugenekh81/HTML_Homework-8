@@ -1,0 +1,9 @@
+.page {
+  font-family: $font-family;
+  &__body {
+    margin: 0;
+    &--no-scroll {
+      overflow: hidden;
+    }
+  }
+}

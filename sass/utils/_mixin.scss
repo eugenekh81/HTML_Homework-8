@@ -1,0 +1,19 @@
+@mixin text-option(
+  $color: #212121,
+  $font-weight: 500,
+  $line-height: normal,
+  $font-size: 20px,
+  $letter-spacing: 0.6px,
+  $text-align: center
+) {
+  color: $color;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+  text-align: $text-align;
+}
+@mixin retreat {
+  margin: 0;
+  padding: 0;
+}

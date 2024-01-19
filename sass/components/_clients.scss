@@ -1,0 +1,32 @@
+.clients {
+  &__title {
+    margin: 0 0 50px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    outline: 1px solid;
+    color: $color-light-gray;
+    transition-duration: 0.3s;
+    &:hover {
+      color: $color-light-blue;
+      transition-duration: 0.3s;
+      cursor: pointer;
+    }
+  }
+  &__icon {
+    width: 106px;
+    height: 60px;
+  }
+}

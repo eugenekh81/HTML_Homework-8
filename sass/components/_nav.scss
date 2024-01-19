@@ -1,0 +1,24 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  &__list {
+    display: flex;
+    gap: 50px;
+    @include retreat;
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    @include text-option($color-black, 500, 16.41px, 16px, unset, unset);
+    text-decoration: none;
+    transition-duration: 0.4s;
+    &:hover {
+      color: $color-light-blue;
+      cursor: pointer;
+    }
+  }
+}

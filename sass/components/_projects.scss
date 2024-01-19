@@ -1,0 +1,55 @@
+.project {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include retreat;
+    list-style: none;
+  }
+  &__list-item {
+    box-sizing: border-box;
+    width: 370px;
+    height: 404px;
+    border: 1px solid #eeeeee;
+    transition: box-shadow 250ms ease;
+    &:hover .project__container--text {
+      transform: translateY(0%);
+    }
+    &:hover {
+      box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    }
+  }
+  &__container {
+    position: relative;
+    overflow: hidden;
+    &--text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 63px 24px;
+      @include text-option($color-white, 400, 28px, 18px, 0.54px, unset);
+      background-color: $color-light-blue;
+      transform: translateY(100%);
+      transition: transform 250ms ease-out;
+    }
+    &--image {
+      display: flex;
+      width: 370px;
+      height: 294px;
+      flex-shrink: 0;
+    }
+    &--content {
+      padding: 20px 24px;
+    }
+    &--title {
+      margin: 0 0 4px;
+      padding: 0;
+      @include text-option($color-black, 700, 36px, 18px, 1.08px, unset);
+    }
+    &--category {
+      @include retreat;
+      @include text-option($color-gray, 400, 30px, 16px, 0.48px, unset);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.footer {
+  padding: 60px 0;
+  background: $color-dark-blue;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  &__socials-title {
+    margin: 0 0 20px;
+    @include text-option($color-white, 700, unset, 14px, 0.42px, unset);
+    text-transform: uppercase;
+  }
+}

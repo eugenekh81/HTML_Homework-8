@@ -1,0 +1,29 @@
+.social {
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    color: $color-light-gray;
+    border-radius: 50%;
+    transition-duration: 0.3s;
+    &:hover {
+      background-color: $color-light-blue;
+      color: $color-white;
+    }
+    &--footer {
+      color: $color-white;
+      background-color: $color-transparent-gray;
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
