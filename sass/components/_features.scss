@@ -4,6 +4,12 @@
     gap: 30px;
     margin: 0;
     padding: 0;
+    @include responsive(tablet) {
+      flex-wrap: wrap;
+    }
+    @include responsive(mobile) {
+      flex-wrap: wrap;
+    }
   }
   &__list-image {
     display: flex;
@@ -15,11 +21,26 @@
     border-radius: 4px;
     background-color: #f5f4fa;
     margin: 0 0 30px;
+    @include responsive(tablet) {
+      width: 354px;
+      height: 120px;
+    }
+    @include responsive(mobile) {
+      width: 450px;
+      height: 120px;
+    }
   }
   &__list-item {
     width: 270px;
     display: flex;
     flex-direction: column;
+    @include responsive(tablet) {
+      width: 354px;
+    }
+    @include responsive(mobile) {
+      width: 450px;
+      margin: 0 auto;
+    }
   }
   &__item-image {
     width: 70px;
@@ -28,6 +49,12 @@
   &__title {
     @include text-option($color-black, 700, 16px, 14px, 0.42px, unset);
     margin: 0 0 10px;
+    @include responsive(tablet) {
+      margin: 0 0 10px;
+    }
+    @include responsive(mobile) {
+      text-align: center;
+    }
   }
   &__text {
     margin: 0px;

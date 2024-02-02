@@ -1,12 +1,23 @@
 .contacts {
   display: flex;
   gap: 50px;
+  @include responsive(mobile) {
+    display: none;
+  }
+  @include responsive(tablet) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
   &__email {
     display: flex;
     align-items: center;
     @include text-option($color-gray, 500, normal, 14px, unset, unset);
     text-decoration: none;
     transition-duration: 0.3s;
+    @include responsive(tablet) {
+      @include text-option($color-gray, 500, normal, 12px, 0.24px, unset);
+    }
     &:hover {
       color: $color-light-blue;
       transition-duration: 0.3s;
@@ -24,6 +35,10 @@
     width: 16px;
     color: $color-gray;
     transition-duration: 0.3s;
+    @include responsive(tablet) {
+      width: 14px;
+      height: 10.009px;
+    }
   }
   &__mobile {
     display: flex;
@@ -33,6 +48,10 @@
     font-weight: 500;
     text-decoration: none;
     transition-duration: 0.3s;
+    @include responsive(tablet) {
+      @include text-option($color-gray, 500, normal, 12px, 0.24px, unset);
+    }
+
     &:hover {
       color: $color-light-blue;
       transition-duration: 0.3s;
@@ -49,5 +68,9 @@
     height: 16px;
     color: $color-gray;
     transition-duration: 0.3s;
+    @include responsive(tablet) {
+      width: 10px;
+      height: 14px;
+    }
   }
 }

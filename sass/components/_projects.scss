@@ -12,6 +12,10 @@
     height: 404px;
     border: 1px solid #eeeeee;
     transition: box-shadow 250ms ease;
+    @include responsive(tablet) {
+      width: 354px;
+      height: 440px;
+    }
     &:hover .project__container--text {
       transform: translateY(0%);
     }

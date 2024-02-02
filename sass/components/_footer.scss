@@ -1,24 +1,63 @@
 .footer {
   padding: 60px 0;
   background: $color-dark-blue;
+
+  &__content--responsive {
+    display: flex;
+    gap: 94px;
+    @include responsive(tablet) {
+      gap: 165px;
+    }
+    @include responsive(mobile) {
+      flex-direction: column;
+      gap: 60px;
+    }
+  }
   &__content {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    @include responsive(tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include responsive(mobile) {
+      flex-direction: column;
+      gap: 60px;
+    }
   }
   &__navigation {
     display: flex;
     flex-direction: column;
     gap: 28px;
+    @include responsive(tablet) {
+      width: 232px;
+    }
+    @include responsive(mobile) {
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__contacts {
     display: flex;
     flex-direction: column;
     gap: 9px;
+    @include responsive(tablet) {
+      align-items: center;
+    }
+    @include responsive(mobile) {
+      align-items: center;
+    }
   }
   &__socials-title {
     margin: 0 0 20px;
     @include text-option($color-white, 700, unset, 14px, 0.42px, unset);
     text-transform: uppercase;
+    @include responsive(tablet) {
+      text-align: center;
+    }
+    @include responsive(mobile) {
+      text-align: center;
+    }
   }
 }

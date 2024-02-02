@@ -4,6 +4,12 @@
   flex-direction: column;
   justify-content: space-between;
   height: 386px;
+  @include responsive(tablet) {
+    display: none;
+  }
+  @include responsive(mobile) {
+    display: none;
+  }
   &__title {
     margin: 0 0 50px;
   }

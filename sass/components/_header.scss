@@ -5,4 +5,41 @@
     height: 80px;
     border: 0 solid rgb(236, 236, 236);
   }
+  &__button {
+    display: none;
+    @include responsive(mobile) {
+      display: block;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background-color: $color-white;
+      &:hover {
+        color: $color-light-blue;
+        transition-duration: 0.3s;
+        cursor: pointer;
+      }
+
+      &:hover .header__button--image {
+        color: $color-light-blue;
+        transition-duration: 0.3s;
+      }
+    }
+    &--image {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__burger-menu {
+    height: 40px;
+    width: 40px;
+    &--cross-icon {
+      height: 19px;
+      width: 19px;
+    }
+    &--burger-icon{
+      // height: 16px;
+      // width: 24px;
+    }
+  }
 }

@@ -10,6 +10,34 @@
   background-repeat: no-repeat;
   background-position: center;
   max-width: 1600px;
+  @include responsive(tablet) {
+    background: linear-gradient(
+        90deg,
+        rgba(47, 48, 58, 0.375) 0%,
+        rgba(47, 48, 58, 0.375) 100%
+      ),
+      url('../images/hero/hero--tablet.jpg'), $color-dark-blue;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 768px;
+    height: 400px;
+  }
+  @include responsive(mobile) {
+    background: linear-gradient(
+        90deg,
+        rgba(47, 48, 58, 0.375) 0%,
+        rgba(47, 48, 58, 0.375) 100%
+      ),
+      url('../images/hero/hero--tablet.jpg'), $color-dark-blue;
+    margin: 0 auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 480px;
+    height: 400px;
+  }
   &__content {
     box-sizing: border-box;
     display: flex;
@@ -18,12 +46,26 @@
     align-items: center;
     gap: 30px;
     height: 600px;
+    @include responsive(tablet) {
+      height: 400px;
+    }
+    @include responsive(mobile) {
+      height: 400px;
+    }
   }
   &__title {
     box-sizing: border-box;
     margin: 0;
     width: 696px;
     @include text-option($color-white, 900, 60px, 44px, 2.64px, center);
+    @include responsive(tablet) {
+      @include text-option($color-white, 900, 42px, 26px, 1.56px, center);
+      width: 360px;
+    }
+    @include responsive(mobile) {
+      @include text-option($color-white, 900, 42px, 26px, 1.56px, center);
+      width: 360px;
+    }
   }
   &__button {
     width: 216px;
@@ -34,11 +76,22 @@
     @include text-option($color-white, 700, unset, 16px, unset, center);
     background-color: $color-light-blue;
     transition-duration: 0.3s;
+    @include responsive(tablet) {
+      padding: 10px 24px;
+      width: 200px;
+      height: 50px;
+    }
     &:hover {
       background-color: $background-color-button-hero;
       color: $color-button-hero;
       transition-duration: 0.4s;
       cursor: pointer;
+      @include responsive(tablet) {
+        background-color: $background-color-button-hero;
+        color: $color-button-hero;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
     }
   }
 }

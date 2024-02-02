@@ -1,6 +1,9 @@
 .nav {
   display: flex;
   justify-content: space-between;
+  @include responsive(mobile){
+    display: none;
+  }
   &__list {
     display: flex;
     gap: 50px;
