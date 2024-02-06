@@ -1,0 +1,20 @@
+.section {
+  padding: 94px 0 94px;
+  @include responsive(tablet) {
+    padding: 60px 0 60px;
+  }
+  &--pd-top-0 {
+    padding-top: 0;
+  }
+  &__title {
+    @include text-option($font-size: 36px, $letter-spacing: 1.08px);
+    font-style: normal;
+    @include responsive(tablet) {
+      @include text-option(
+        $font-size: 28px,
+        $font-weight: 500,
+        $letter-spacing: 0.84px
+      );
+    }
+  }
+}

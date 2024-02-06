@@ -1,0 +1,104 @@
+.header {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    border: 0 solid rgb(236, 236, 236);
+    @include responsive(mobile) {
+      &.is-open {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        opacity: 1;
+        background-color: #fff;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 302px;
+    @include responsive(tablet) {
+      gap: 90px;
+    }
+    @include responsive(mobile) {
+      display: none;
+      &.is-open {
+        position: fixed;
+        z-index: 1;
+        height: 100vh;
+        width: 100vw;
+        display: block;
+        background-color: #fff;
+      }
+    }
+  }
+  &__button {
+    display: none;
+    position: relative;
+    z-index: 99;
+    @include responsive(mobile) {
+      align-self: center;
+      display: block;
+      margin: 0;
+      padding: 10px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: $color-white;
+      &.is-open {
+        .header__burger-menu--cross-icon {
+          opacity: 1;
+          pointer-events: all;
+        }
+        .header__burger-menu--burger-icon {
+          display: none;
+          pointer-events: none;
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &__burger-menu {
+    height: 100%;
+    width: 100%;
+
+    &--burger-icon {
+      transition: all 0.3s ease;
+    }
+
+    &--cross-icon {
+      opacity: 0;
+      pointer-events: none;
+
+      transition: all 0.3s ease;
+    }
+  }
+  &__social {
+    display: none;
+    @include responsive(mobile) {
+      display: block;
+    }
+    &--list {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+    }
+    &--item {
+      padding: 0 10px 0;
+      list-style: none;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+      &:first-child {
+        padding-left: 0;
+      }
+      &:nth-child(4) {
+        border-right: none;
+      }
+    }
+    &--link {
+      padding-right: 10px;
+      text-decoration: none;
+      padding: 0;
+      @include text-option($color-light-blue, 500, 22px, 18px, 0.02em, left);
+    }
+  }
+}

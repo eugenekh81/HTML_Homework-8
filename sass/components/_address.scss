@@ -1,0 +1,14 @@
+.address {
+  display: flex;
+  flex-direction: column;
+
+  &__map {
+    text-decoration: none;
+    @include text-option($color-white, 400, 24px, 14px, 0.42px, unset);
+  }
+
+  &__link {
+    text-decoration: none;
+    @include text-option(#ffffff99, 400, 24px, 14px, 0.42px, unset);
+  }
+}

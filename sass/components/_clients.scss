@@ -1,0 +1,49 @@
+.clients {
+  &__title {
+    margin: 0 0 50px;
+    @include responsive(tablet) {
+      @include text-option($letter-spacing: 0.84px, $font-size: 28px);
+      margin: 0 0 30px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    @include responsive(tablet) {
+      flex-wrap: wrap;
+    }
+    @include responsive(mobile) {
+      flex-wrap: wrap;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    outline: 1px solid;
+    color: $color-light-gray;
+    transition-duration: 0.3s;
+    @include responsive(tablet) {
+      width: 226px;
+      height: 92px;
+    }
+    @include responsive(mobile) {
+      width: 210px;
+      height: 92px;
+    }
+    &:hover {
+      color: $color-light-blue;
+      transition-duration: 0.3s;
+      cursor: pointer;
+    }
+  }
+  &__icon {
+    width: 106px;
+    height: 60px;
+  }
+}

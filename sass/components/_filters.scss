@@ -1,0 +1,31 @@
+.filters {
+  &__categories {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 0 50px;
+    @include responsive(mobile) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin: 0 145px 50px 0;
+    }
+    &--button {
+      font-family: $font-inherit;
+      padding: 0 22px;
+      height: 38px;
+      border: none;
+      border-radius: 4px;
+      background: rgba(245, 244, 250, 1);
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+      transition-duration: 0.3s;
+      @include text-option($color-black, 500, 26px, 16px, 0.48px, center);
+      &:hover {
+        background-color: $color-light-blue;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        color: $color-white;
+      }
+    }
+  }
+}

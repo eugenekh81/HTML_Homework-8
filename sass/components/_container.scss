@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  width: 1170px;
+  @include responsive(tablet) {
+    margin: 0 auto;
+    width: 738px;
+  }
+  @include responsive(mobile) {
+    margin: 0 auto;
+    width: 480px;
+  }
+}

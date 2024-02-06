@@ -1,0 +1,21 @@
+.logo {
+  display: flex;
+  align-items: center;
+  width: 145px;
+  font-family: $font-Raleway;
+  text-decoration: none;
+  @include responsive(tablet) {
+    width: 134px;
+    @include text-option(unset, 700, 30.52px, 24px, 0.72px, unset);
+  }
+  @include text-option(unset, 700, 30.52px, 26px, unset, unset);
+  &__web {
+    color: $color-light-blue;
+  }
+  &__studio {
+    color: $color-dark-black;
+  }
+  &__studio--footer {
+    color: $color-white;
+  }
+}

@@ -1,0 +1,36 @@
+@mixin text-option(
+  $color: #212121,
+  $font-weight: 500,
+  $line-height: normal,
+  $font-size: 20px,
+  $letter-spacing: 0.6px,
+  $text-align: center
+) {
+  color: $color;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+  text-align: $text-align;
+}
+@mixin retreat {
+  margin: 0;
+  padding: 0;
+}
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

@@ -1,0 +1,43 @@
+.services {
+  padding: 0 0 94px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 386px;
+  @include responsive(tablet) {
+    display: none;
+  }
+  @include responsive(mobile) {
+    display: none;
+  }
+  &__title {
+    margin: 0 0 50px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include retreat;
+    list-style: none;
+    &-item {
+      width: 370px;
+      height: 294px;
+    }
+    &-container {
+      position: relative;
+      display: flex;
+    }
+    &-text {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 27px 0 27px;
+      background-color: #2f303acc;
+      @include text-option($color-white, 700, normal, 14px, 0.42px, center);
+      font-style: normal;
+      text-transform: uppercase;
+    }
+  }
+}
