@@ -1,13 +1,15 @@
 .contacts {
   display: flex;
   gap: 50px;
-  @include responsive(mobile) {
-    display: none;
-  }
   @include responsive(tablet) {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+  }
+  @include responsive(mobile) {
+    flex-direction: column-reverse;
+    gap: 32px;
+    padding-bottom: 64px;
   }
   &__email {
     display: flex;
@@ -18,12 +20,14 @@
     @include responsive(tablet) {
       @include text-option($color-gray, 500, normal, 12px, 0.24px, unset);
     }
+    @include responsive(mobile) {
+      @include text-option($color-gray, 500, 28px, 24px, 0.02em, left);
+    }
     &:hover {
       color: $color-light-blue;
       transition-duration: 0.3s;
       cursor: pointer;
     }
-
     &:hover .contacts__email-icon {
       color: $color-light-blue;
       transition-duration: 0.3s;
@@ -39,6 +43,9 @@
       width: 14px;
       height: 10.009px;
     }
+    @include responsive(mobile) {
+      display: none;
+    }
   }
   &__mobile {
     display: flex;
@@ -51,7 +58,9 @@
     @include responsive(tablet) {
       @include text-option($color-gray, 500, normal, 12px, 0.24px, unset);
     }
-
+    @include responsive(mobile) {
+      @include text-option($color-light-blue, 500, 28px, 24px, 0.02em, left);
+    }
     &:hover {
       color: $color-light-blue;
       transition-duration: 0.3s;
@@ -71,6 +80,9 @@
     @include responsive(tablet) {
       width: 10px;
       height: 14px;
+    }
+    @include responsive(mobile) {
+      display: none;
     }
   }
 }

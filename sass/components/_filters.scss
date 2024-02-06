@@ -4,6 +4,11 @@
     justify-content: center;
     gap: 8px;
     margin: 0 0 50px;
+    @include responsive(mobile) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin: 0 145px 50px 0;
+    }
     &--button {
       font-family: $font-inherit;
       padding: 0 22px;

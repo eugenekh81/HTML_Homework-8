@@ -14,7 +14,11 @@
     transition: box-shadow 250ms ease;
     @include responsive(tablet) {
       width: 354px;
-      height: 440px;
+      height: 404px;
+    }
+    @include responsive(mobile) {
+      width: 450px;
+      height: 100%;
     }
     &:hover .project__container--text {
       transform: translateY(0%);
@@ -36,12 +40,19 @@
       background-color: $color-light-blue;
       transform: translateY(100%);
       transition: transform 250ms ease-out;
+      @include responsive(mobile) {
+        padding: 78px 24px;
+      }
     }
     &--image {
       display: flex;
       width: 370px;
       height: 294px;
       flex-shrink: 0;
+      @include responsive(mobile) {
+        width: 100%;
+        object-fit: cover;
+      }
     }
     &--content {
       padding: 20px 24px;

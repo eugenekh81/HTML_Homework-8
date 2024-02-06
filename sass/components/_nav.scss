@@ -1,17 +1,30 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  @include responsive(mobile){
-    display: none;
+  &.is-open {
+    position: fixed;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    background-color: #fff;
   }
   &__list {
     display: flex;
     gap: 50px;
     @include retreat;
     list-style: none;
+    @include responsive(mobile) {
+      z-index: 2;
+      flex-direction: column;
+      padding: 48px 0 306px;
+      height: 208px;
+      gap: 32px;
+    }
   }
   &__item {
     display: flex;
+    align-items: stretch;
   }
   &__link {
     display: flex;
@@ -19,6 +32,14 @@
     @include text-option($color-black, 500, 16.41px, 16px, unset, unset);
     text-decoration: none;
     transition-duration: 0.4s;
+    @include responsive(mobile) {
+      font-family: Roboto;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 47px;
+      letter-spacing: 0.02em;
+      text-align: left;
+    }
     &:hover {
       color: $color-light-blue;
       cursor: pointer;

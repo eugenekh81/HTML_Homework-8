@@ -12,7 +12,6 @@
     pointer-events: none;
   }
 }
-
 .modal {
   position: absolute;
   left: 50%;
@@ -36,7 +35,6 @@
   &__form {
     margin: 40px auto;
   }
-
   &--open {
     transform: translate(-50%, -50%);
   }
@@ -110,7 +108,6 @@
         margin: 0 0 10px;
       }
     }
-
     &__input {
       padding: 0 0 0 42px;
       border-radius: 4px;
@@ -128,7 +125,6 @@
         color: $color-light-blue;
       }
     }
-
     &__icon {
       position: absolute;
       left: 12px;
@@ -191,7 +187,6 @@
         height: 14px;
       }
     }
-
     &__checkbox {
       cursor: pointer;
       -webkit-appearance: none;
@@ -208,14 +203,12 @@
         width: 14px;
         height: 13px;
       }
-
       &:checked + &--icon {
         background-color: $color-light-blue;
         border-color: $color-light-blue;
         background-origin: border-box;
       }
     }
-
     &__link {
       @include text-option($color-light-blue, 400, 24px, 14px, 0.42px, unset);
       @include responsive(tablet mobile) {
@@ -227,7 +220,6 @@
         );
       }
     }
-
     &__button {
       align-self: center;
       width: 200px;

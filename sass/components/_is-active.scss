@@ -2,6 +2,9 @@
   position: relative;
   color: $color-light-blue;
   &::after {
+    @include responsive(mobile) {
+      display: none;
+    }
     position: absolute;
     left: 0;
     bottom: 0;
