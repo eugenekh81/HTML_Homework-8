@@ -17,7 +17,7 @@
     @include responsive(mobile) {
       z-index: 2;
       flex-direction: column;
-      padding: 48px 0 306px;
+      // padding: 48px 0 306px;
       height: 208px;
       gap: 32px;
     }

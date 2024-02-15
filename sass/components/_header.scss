@@ -7,8 +7,9 @@
     @include responsive(mobile) {
       &.is-open {
         position: fixed;
-        height: 100vh;
+        // height: 100%;
         width: 100vw;
+        margin: 0 auto;
         opacity: 1;
         background-color: #fff;
       }
@@ -23,11 +24,16 @@
     @include responsive(mobile) {
       display: none;
       &.is-open {
+        gap: 0;
         position: fixed;
+        justify-content: space-around;
+        padding: 0 0 48px 40px;
+
+        flex-direction: column;
         z-index: 1;
         height: 100vh;
-        width: 100vw;
-        display: block;
+        width: 100%;
+        display: flex;
         background-color: #fff;
       }
     }

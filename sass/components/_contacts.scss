@@ -9,7 +9,6 @@
   @include responsive(mobile) {
     flex-direction: column-reverse;
     gap: 32px;
-    padding-bottom: 64px;
   }
   &__email {
     display: flex;

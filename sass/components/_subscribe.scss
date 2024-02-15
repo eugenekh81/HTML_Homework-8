@@ -7,6 +7,7 @@
   }
   @include responsive(mobile) {
     align-items: center;
+    margin: 0 15px;
   }
   &__title {
     @include text-option($color-white, 700, unset, 14px, 0.42px, unset);
@@ -25,6 +26,8 @@
     @include responsive(mobile) {
       flex-direction: column;
       align-items: center;
+      max-width: 450px;
+      width: 100%;
     }
   }
   &__input {
@@ -39,7 +42,7 @@
     background: #2196f300;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     @include responsive(mobile) {
-      width: 450px;
+      width: 100%;
     }
     &:focus {
       color: $color-white;

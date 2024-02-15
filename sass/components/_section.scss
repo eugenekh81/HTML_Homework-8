@@ -3,6 +3,11 @@
   @include responsive(tablet) {
     padding: 60px 0 60px;
   }
+  @include responsive(mobile) {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+  }
   &--pd-top-0 {
     padding-top: 0;
   }

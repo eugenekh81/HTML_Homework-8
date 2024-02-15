@@ -1,4 +1,7 @@
 .features {
+  @include responsive(mobile) {
+    margin: 0 auto;
+  }
   &__list {
     display: flex;
     gap: 30px;
@@ -9,6 +12,7 @@
     }
     @include responsive(mobile) {
       flex-wrap: wrap;
+      margin: 0 15px;
     }
   }
   &__list-image {
@@ -26,7 +30,8 @@
       height: 120px;
     }
     @include responsive(mobile) {
-      width: 450px;
+      max-width: 450px;
+      width: 100%;
       height: 120px;
     }
   }
@@ -38,7 +43,8 @@
       width: 354px;
     }
     @include responsive(mobile) {
-      width: 450px;
+      max-width: 450px;
+      width: 100%;
       margin: 0 auto;
     }
   }

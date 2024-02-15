@@ -2,6 +2,10 @@
   font-family: $font-family;
   &__body {
     margin: 0;
+    // @include responsive(mobile) {
+    //   max-width: 480px;
+    //   width: 100%;
+    // }
     &--no-scroll {
       overflow: hidden;
     }
